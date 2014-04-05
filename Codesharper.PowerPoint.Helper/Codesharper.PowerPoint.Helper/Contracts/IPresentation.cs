@@ -6,8 +6,6 @@
     public interface IPresentation
     {
 
-        PPT.Application CreatePowerPointApplication();
-
         PPT.Presentation CreatePowerPointPresentation(PPT.Application powerPointApplication);
 
         PPT.Presentation OpenExistingPowerPointPresentation(PPT.Application powerPointApplication, string pathAndFileName);

@@ -40,7 +40,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IPowerPointApplication.cs" />
     <Compile Include="Contracts\IPresentation.cs" />
+    <Compile Include="Implementations\PowerPointApplication.cs" />
     <Compile Include="Implementations\Presentation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using PPTHelper = Codesharper.PowerPoint.Helper.Implementations.Presentation;
+using PPTApplication = Codesharper.PowerPoint.Helper.Implementations.PowerPointApplication;
 using PPT = Microsoft.Office.Interop.PowerPoint;
 
 namespace Codesharper.PowerPoint.Helper.Tester
@@ -10,7 +11,9 @@ namespace Codesharper.PowerPoint.Helper.Tester
         static void Main(string[] args)
         {
             var helper = new PPTHelper();
-            var pptApp = helper.CreatePowerPointApplication();
+            var pptAppHelper = new PPTApplication();
+            var pptApp = pptAppHelper.CreatePowerPointApplication();
+
             var presentation = helper.CreatePowerPointPresentation(pptApp);
             var slideAtEnd = helper.AddSlideAtEndOfPresentation(presentation);
             helper.InsertSlideIntoPresentation(presentation, (helper.GetSlideCountInPresentation(presentation) + 1));

@@ -10,12 +10,6 @@
 
         private const OFFICE.MsoTriState oTrue = OFFICE.MsoTriState.msoTrue;
 
-        public PPT.Application CreatePowerPointApplication()
-        {
-            var pptAppHandle = new PPT.Application();
-            return pptAppHandle;
-        }
-
         public PPT.Presentation CreatePowerPointPresentation(PPT.Application powerPointApplication)
         {
             return powerPointApplication.Presentations.Add(oFalse);
