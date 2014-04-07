@@ -41,7 +41,7 @@
         protected override void Given()
         {
             var pptApplication = this.applicationHandler.CreatePowerPointApplication();
-            this.presentation = this.presentationHandler.CreatePowerPointPresentation(pptApplication);
+            this.presentation = this.presentationHandler.CreatePowerPointPresentation(pptApplication,false);
         }
 
         protected override void When()

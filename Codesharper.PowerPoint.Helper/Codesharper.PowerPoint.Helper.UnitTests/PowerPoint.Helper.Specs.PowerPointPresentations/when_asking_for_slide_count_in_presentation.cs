@@ -25,7 +25,7 @@
         protected override void Given()
         {
             this.powerpointHandle = new PPT.Application();
-            this.presentationHandle = SUT.CreatePowerPointPresentation(powerpointHandle);
+            this.presentationHandle = SUT.CreatePowerPointPresentation(powerpointHandle, false);
         }
 
         protected override void When()

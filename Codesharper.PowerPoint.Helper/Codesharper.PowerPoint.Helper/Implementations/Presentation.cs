@@ -27,8 +27,13 @@
             presentationToClose.Close();
         }
 
-        public PPT.Presentation CreatePowerPointPresentation(PPT.Application powerPointApplication)
+        public PPT.Presentation CreatePowerPointPresentation(PPT.Application powerPointApplication, bool showPowerPoint)
         {
+            if (showPowerPoint)
+            {
+                return powerPointApplication.Presentations.Add(oTrue);
+            }
+
             return powerPointApplication.Presentations.Add(oFalse);
         }
 

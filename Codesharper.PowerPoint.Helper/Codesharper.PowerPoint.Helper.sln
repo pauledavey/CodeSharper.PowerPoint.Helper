@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codesharper.PowerPoint.Help
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codesharper.PowerPoint.Helper.Specs", "Codesharper.PowerPoint.Helper.UnitTests\Codesharper.PowerPoint.Helper.Specs.csproj", "{EB127744-209E-4404-955A-0B5CF5A7252C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codesharper.PowerPoint.Helper.Cmdlet", "Codesharper.PowerPoint.Helper.Cmdlet\Codesharper.PowerPoint.Helper.Cmdlet.csproj", "{403EB378-FEAB-4F5E-AF67-918566E080E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EB127744-209E-4404-955A-0B5CF5A7252C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB127744-209E-4404-955A-0B5CF5A7252C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB127744-209E-4404-955A-0B5CF5A7252C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403EB378-FEAB-4F5E-AF67-918566E080E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403EB378-FEAB-4F5E-AF67-918566E080E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403EB378-FEAB-4F5E-AF67-918566E080E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403EB378-FEAB-4F5E-AF67-918566E080E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

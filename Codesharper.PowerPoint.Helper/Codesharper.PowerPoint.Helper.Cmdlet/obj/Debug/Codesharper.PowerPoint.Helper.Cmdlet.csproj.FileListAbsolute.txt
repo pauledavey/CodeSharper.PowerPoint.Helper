@@ -1,0 +1,5 @@
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Cmdlet\obj\Debug\Codesharper.PowerPoint.Helper.Cmdlet.csprojResolveAssemblyReference.cache
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Cmdlet\bin\Debug\Codesharper.PowerPoint.Helper.Cmdlet.dll
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Cmdlet\bin\Debug\Codesharper.PowerPoint.Helper.Cmdlet.pdb
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Cmdlet\obj\Debug\Codesharper.PowerPoint.Helper.Cmdlet.dll
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Cmdlet\obj\Debug\Codesharper.PowerPoint.Helper.Cmdlet.pdb

@@ -28,7 +28,7 @@
 
         protected override void When()
         {
-            presentationHandle = this.SUT.CreatePowerPointPresentation(this.powerpointHandle);
+            presentationHandle = this.SUT.CreatePowerPointPresentation(this.powerpointHandle,false);
         }
 
         [Test]

@@ -13,7 +13,7 @@
 
         void ClosePresentation(PPT.Presentation presentationToClose);
 
-        PPT.Presentation CreatePowerPointPresentation(PPT.Application powerPointApplication);
+        PPT.Presentation CreatePowerPointPresentation(PPT.Application powerPointApplication, bool showWindow);
 
         int GetSlideCountInPresentation(PPT.Presentation presentation);
 

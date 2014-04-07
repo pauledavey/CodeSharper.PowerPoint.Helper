@@ -28,7 +28,7 @@
         protected override void Given()
         {
             this.powerpointHandle = new PPT.Application();
-            this.presentationHandle = this.SUT.CreatePowerPointPresentation(powerpointHandle);
+            this.presentationHandle = this.SUT.CreatePowerPointPresentation(powerpointHandle,false);
             initialSlideCount = this.SUT.GetSlideCountInPresentation(presentationHandle);
         }
 

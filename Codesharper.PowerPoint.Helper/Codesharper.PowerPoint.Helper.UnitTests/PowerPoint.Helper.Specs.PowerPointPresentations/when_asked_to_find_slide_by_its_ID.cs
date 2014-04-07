@@ -29,7 +29,7 @@ namespace Codesharper.PowerPoint.Helper.Specs.PowerPoint.Helper.Specs.PowerPoint
         protected override void Given()
         {
             this.powerpointHandle = new PPT.Application();
-            this.presentationHandle = this.SUT.CreatePowerPointPresentation(powerpointHandle);
+            this.presentationHandle = this.SUT.CreatePowerPointPresentation(powerpointHandle,false);
             slideHandle = this.SUT.AddSlideAtEndOfPresentation(this.presentationHandle);
             slideID = slideHandle.SlideID;
         }
