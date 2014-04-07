@@ -69,6 +69,7 @@
     <Compile Include="PowerPoint.Helper.Specs.PowerPointApplication\when_creating_a_PowerPoint_application.cs" />
     <Compile Include="PowerPoint.Helper.Specs.PowerPointApplication\when_quitting_a_PowerPoint_application.cs" />
     <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_adding_a_slide_at_the_end_of_presentation.cs" />
+    <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_asked_to_find_slide_by_its_ID.cs" />
     <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_asking_for_slide_count_in_presentation.cs" />
     <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_creating_a_new_presentation.cs" />
     <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_inserting_a_slide_into_a_presentation.cs" />

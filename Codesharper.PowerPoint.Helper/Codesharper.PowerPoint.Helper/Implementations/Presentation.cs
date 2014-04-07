@@ -63,5 +63,12 @@
 
             presentationToSave.SaveAs(pathAndFileName, fileType, OFFICE.MsoTriState.msoFalse);
         }
+
+        public PPT.Slide FindSlideByItsID(PPT.Presentation presentation, int slideId)
+        {
+            return presentation.Slides.FindBySlideID(slideId);
+        }
+
+        
     }
 }
