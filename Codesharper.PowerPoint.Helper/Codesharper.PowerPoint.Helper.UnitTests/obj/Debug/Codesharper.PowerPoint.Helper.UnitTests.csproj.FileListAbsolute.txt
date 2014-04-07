@@ -1,0 +1,12 @@
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Debug\Codesharper.PowerPoint.Helper.UnitTests.dll
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Debug\Codesharper.PowerPoint.Helper.UnitTests.pdb
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Debug\Codesharper.PowerPoint.Helper.dll
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Debug\nunit.framework.dll
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Debug\Codesharper.PowerPoint.Helper.pdb
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Debug\nunit.framework.xml
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\obj\Debug\Codesharper.PowerPoint.Helper.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\obj\Debug\Codesharper.PowerPoint.Helper.UnitTests.dll
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\obj\Debug\Codesharper.PowerPoint.Helper.UnitTests.pdb
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Debug\Should.dll
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Debug\Moq.dll
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Debug\Moq.xml

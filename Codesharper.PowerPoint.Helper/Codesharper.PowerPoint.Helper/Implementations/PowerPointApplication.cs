@@ -1,20 +1,24 @@
 ﻿namespace Codesharper.PowerPoint.Helper.Implementations
 {
-    using Codesharper.PowerPoint.Helper.Contracts;
+    #region Using Directives
+
     using OFFICE = Codesharper.PowerPoint.Helper.Contracts;
     using PPT = Microsoft.Office.Interop.PowerPoint;
 
-    public class PowerPointApplication : IPowerPointApplication
+    #endregion
+
+    public class PowerPointApplication : OFFICE.IPowerPointApplication
     {
-        public PPT.Application CreatePowerPointApplication()
-        {
-            var pptAppHandle = new PPT.Application();
-            return pptAppHandle;
-        }
 
         public void ClosePowerPointApplication(PPT.Application powerPointApplication)
         {
             powerPointApplication.Quit();
+        }
+
+        public PPT.Application CreatePowerPointApplication()
+        {
+            var pptAppHandle = new PPT.Application();
+            return pptAppHandle;
         }
     }
 }
