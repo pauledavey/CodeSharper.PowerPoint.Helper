@@ -1,32 +1,47 @@
 ﻿using System.Management.Automation;
+using System.Configuration.Install;
+
+// How to debug a cmdlet
+// http://www.sharepointjohn.com/powershell-debug-custom-csharp-powershell-cmdlet/
+
 
 namespace Codesharper.PowerPoint.Helper.Cmdlet
 {
+    using System;
+    using System.Collections;
+
     using Cmdlet = System.Management.Automation.Cmdlet;
 
     [Cmdlet(VerbsCommunications.Send, "Greeting")]
     public class CreatePowerPointFromTables : Cmdlet
     {
         [Parameter(Mandatory = true)]
-        public string Name
+        public PSObject[] objectIn
         {
-            get
-            {
-                return name;
-            }
-
-            set
-            {
-                name = value;
-            }
+            get;
+            set;
         }
-
-        private string name;
 
         protected override void ProcessRecord()
         {
-            WriteObject("Hello " + name + "!");
-        }
+            foreach (var entry in objectIn)
 
-    }
+                
+            {
+                foreach (var innerEntry in entry.Properties)
+                {
+                    try
+                    {
+                        WriteObject(innerEntry.Name + " = " + innerEntry.Value);
+                    }
+                    catch (Exception)
+                    {
+                        
+                    }
+                   
+                }
+
+            }
         }
+    }
+}
