@@ -23,10 +23,13 @@
 
         private PPT.Slide slideHandle;
 
+        private int initialSlideCount;
+
         protected override void Given()
         {
             this.powerpointHandle = new PPT.Application();
             this.presentationHandle = this.SUT.CreatePowerPointPresentation(powerpointHandle);
+            initialSlideCount = this.SUT.GetSlideCountInPresentation(presentationHandle);
         }
 
         protected override void When()
@@ -38,6 +41,14 @@
         public void then_it_should_not_error()
         {
             this.slideHandle.ShouldNotBeNull();
+        }
+
+
+        [Test]
+        public void then_total_number_of_slides_should_increase_by_one()
+        {
+            this.SUT.GetSlideCountInPresentation(this.presentationHandle).ShouldBeGreaterThan(initialSlideCount);
+
         }
     }
 }
