@@ -29,5 +29,29 @@ namespace Codesharper.PowerPoint.Helper.Implementations
             var table = slide.Shapes.AddTable(numRows, numColumns, xLocation, yLocation, width, height);
             return table;
         }
+
+        public PPT.Shape DrawLine(PPT.Slide slide, float xStartLocation, float xEndLocation, float yStartLocation, float yEndLocation)
+        {
+            return slide.Shapes.AddLine(xStartLocation, yStartLocation, xEndLocation, yEndLocation);
+        }
+
+        public PPT.Shape DrawShape(PPT.Slide slide, MsoAutoShapeType shapeType, float leftPosition, float topPosition, float width, float height)
+        {
+            return slide.Shapes.AddShape(shapeType, leftPosition, topPosition, width, height);
+        }
+
+        public PPT.Shape AddPicture(PPT.Slide slide, string file, float leftPosition, float topPosition, float width, float height)
+        {
+            var shapeOut = slide.Shapes.AddPicture(
+                    file,
+                    MsoTriState.msoFalse,
+                    MsoTriState.msoTrue,
+                    leftPosition,
+                    topPosition,
+                    width,
+                    height);
+
+            return shapeOut;
+        }
     }
 }
