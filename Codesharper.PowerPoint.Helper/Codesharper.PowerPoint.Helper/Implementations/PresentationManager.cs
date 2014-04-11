@@ -9,7 +9,7 @@
 
     #endregion
 
-    public class Presentation : IPresentation
+    public class PresentationManager : IPresentationManager
     {
         private const OFFICE.MsoTriState oFalse = OFFICE.MsoTriState.msoFalse;
 

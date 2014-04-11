@@ -1,4 +1,4 @@
-﻿namespace Codesharper.PowerPoint.Helper.Specs.PowerPoint.Helper.Specs.PowerPointApplication
+﻿namespace Codesharper.PowerPoint.Helper.Specs.PowerPoint.Helper.Specs
 {
     #region Using Directives
 
@@ -10,13 +10,11 @@
 
     using SpecsFor;
 
-    using PPT = Microsoft.Office.Interop.PowerPoint;
-
     #endregion
 
-        public class when_quitting_a_PowerPoint_application : SpecsFor<PowerPointApplication>
+        public class when_quitting_a_PowerPoint_application : SpecsFor<PowerPointApplicationManager>
         {
-            private PPT.Application appHandle;
+            private Microsoft.Office.Interop.PowerPoint.Application appHandle;
 
             [Test]
             public void then_it_should_not_error()

@@ -7,7 +7,7 @@
 
     #endregion
 
-    public interface IPowerPointApplication
+    public interface IPowerPointManager
     {
         void ClosePowerPointApplication(PPT.Application powerPointApplication);
 

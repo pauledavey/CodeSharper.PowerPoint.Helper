@@ -11,7 +11,7 @@ namespace Codesharper.PowerPoint.Helper.Implementations
     using OFFICE = Microsoft.Office.Core;
     using Microsoft.Office.Core;
 
-    public class Shapes : IShapes
+    public class ShapesManager : IShapesManager
     {
         public PPT.Shape AddTextBoxToSlide(PPT.Slide slide, MsoTextOrientation orientation, float xLocation, float yLocation, float width, float height)
         {

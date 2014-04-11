@@ -1,4 +1,4 @@
-﻿namespace Codesharper.PowerPoint.Helper.Specs.PowerPoint.Helper.Specs.PowerPointPresentations
+﻿namespace Codesharper.PowerPoint.Helper.Specs.PowerPoint.Helper.Specs
 {
     #region Using Directives
 
@@ -10,23 +10,21 @@
 
     using SpecsFor;
 
-    using PPT = Microsoft.Office.Interop.PowerPoint;
-
     #endregion
 
-    public class when_inserting_a_slide_into_a_presentation : SpecsFor<Presentation>
+    public class when_inserting_a_slide_into_a_presentation : SpecsFor<PresentationManager>
     {
-        private readonly PowerPointApplication applicationHandler = new PowerPointApplication();
+        private readonly PowerPointApplicationManager applicationHandler = new PowerPointApplicationManager();
 
-        private readonly Presentation presentationHandler = new Presentation();
+        private readonly PresentationManager presentationHandler = new PresentationManager();
 
         private SlideManager slideManager;
 
         private int indexOfSlide = 1;
 
-        private PPT.Presentation presentation;
+        private Microsoft.Office.Interop.PowerPoint.Presentation presentation;
 
-        private PPT.Slide slide;
+        private Microsoft.Office.Interop.PowerPoint.Slide slide;
 
         [Test]
         public void then_it_should_not_error()
@@ -49,7 +47,7 @@
 
         protected override void When()
         {
-            this.slide = this.slideManager.InsertSlideIntoPresentation(this.presentation, this.indexOfSlide);
+            this.slide = this.slideManager.InsertSlide(this.presentation, this.indexOfSlide);
         }
     }
 }

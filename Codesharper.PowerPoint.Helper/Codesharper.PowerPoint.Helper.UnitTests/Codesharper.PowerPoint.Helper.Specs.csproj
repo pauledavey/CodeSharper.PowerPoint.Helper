@@ -67,15 +67,25 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PowerPoint.Helper.Specs.PowerPointApplication\when_creating_a_PowerPoint_application.cs" />
-    <Compile Include="PowerPoint.Helper.Specs.PowerPointApplication\when_quitting_a_PowerPoint_application.cs" />
-    <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_adding_a_slide_at_the_end_of_presentation.cs" />
-    <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_asked_to_add_a_textbox_to_a_slide.cs" />
-    <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_asked_to_add_a_table_to_a_slide.cs" />
-    <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_asked_to_find_slide_by_its_ID.cs" />
-    <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_asking_for_slide_count_in_presentation.cs" />
-    <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_creating_a_new_presentation.cs" />
-    <Compile Include="PowerPoint.Helper.Specs.PowerPointPresentations\when_inserting_a_slide_into_a_presentation.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\PowerPoint\when_creating_a_PowerPoint_application.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\PowerPoint\when_quitting_a_PowerPoint_application.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_set_a_textboxs_text.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_getting_a_slide_comment.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_asked_to_count_slide_comments.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_deleting_a_slide_comment.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_adding_a_slide_comment.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_deleting_a_slide.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_moving_a_slide_in_a_presentation.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_setting_a_slides_layout.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_cloning_a_slide_in_a_presentation.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_adding_a_slide_at_the_start_of_presentation.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_adding_a_slide_at_the_end_of_presentation.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_add_a_textbox_to_a_slide.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_add_a_table_to_a_slide.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_asked_to_find_slide_by_its_ID.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_asking_for_slide_count_in_presentation.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Presentation\when_creating_a_new_presentation.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_inserting_a_slide_into_a_presentation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

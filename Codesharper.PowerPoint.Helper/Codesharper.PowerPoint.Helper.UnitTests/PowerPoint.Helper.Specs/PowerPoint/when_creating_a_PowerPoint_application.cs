@@ -1,4 +1,4 @@
-﻿namespace Codesharper.PowerPoint.Helper.Specs.PowerPoint.Helper.Specs.PowerPointApplication
+﻿namespace Codesharper.PowerPoint.Helper.Specs.PowerPoint.Helper.Specs
 {
     #region Using Directives
 
@@ -12,7 +12,7 @@
 
     #endregion
 
-        public class when_creating_a_PowerPoint_application : SpecsFor<PowerPointApplication>
+        public class when_creating_a_PowerPoint_application : SpecsFor<PowerPointApplicationManager>
         {
             private Microsoft.Office.Interop.PowerPoint.Application _result;
 

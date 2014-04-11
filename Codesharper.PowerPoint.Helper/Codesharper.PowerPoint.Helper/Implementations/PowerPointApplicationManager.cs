@@ -7,7 +7,7 @@
 
     #endregion
 
-    public class PowerPointApplication : OFFICE.IPowerPointApplication
+    public class PowerPointApplicationManager : OFFICE.IPowerPointManager
     {
 
         public void ClosePowerPointApplication(PPT.Application powerPointApplication)

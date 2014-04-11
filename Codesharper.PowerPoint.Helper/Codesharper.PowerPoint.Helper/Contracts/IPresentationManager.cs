@@ -7,7 +7,7 @@
 
     #endregion
 
-    public interface IPresentation
+    public interface IPresentationManager
     {
 
         void ClosePresentation(PPT.Presentation presentationToClose);
