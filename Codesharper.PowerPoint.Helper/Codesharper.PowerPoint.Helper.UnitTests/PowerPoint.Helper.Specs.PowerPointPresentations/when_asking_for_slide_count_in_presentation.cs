@@ -22,15 +22,17 @@
 
         private int slideCount;
 
+        private SlideManager slideManager;
         protected override void Given()
         {
+            this.slideManager = new SlideManager();
             this.powerpointHandle = new PPT.Application();
             this.presentationHandle = SUT.CreatePowerPointPresentation(powerpointHandle, false);
         }
 
         protected override void When()
         {
-            slideCount = this.SUT.GetSlideCountInPresentation(this.presentationHandle);
+            slideCount = this.slideManager.GetSlideCountInPresentation(this.presentationHandle);
         }
 
         [Test]

@@ -20,13 +20,16 @@
 
         private Shapes shapesHandler;
 
+        private SlideManager slideManager;
+
         private PPT.Shape returnedShape;
 
         protected override void Given()
         {
             this.powerpointHandle = new PPT.Application();
+            slideManager = new SlideManager();
             this.presentationHandle = this.SUT.CreatePowerPointPresentation(powerpointHandle, false);
-            this.slideHandle = this.SUT.AddSlideAtEndOfPresentation(presentationHandle);
+            this.slideHandle = this.slideManager.AddSlideAtEndOfPresentation(presentationHandle);
             this.shapesHandler = new Shapes();
         }
 

@@ -43,9 +43,12 @@
     <Compile Include="Contracts\IPowerPointApplication.cs" />
     <Compile Include="Contracts\IPresentation.cs" />
     <Compile Include="Contracts\IShapes.cs" />
+    <Compile Include="Contracts\ISlide.cs" />
+    <Compile Include="Enumerations\Locations.cs" />
     <Compile Include="Implementations\PowerPointApplication.cs" />
     <Compile Include="Implementations\Presentation.cs" />
     <Compile Include="Implementations\Shapes.cs" />
+    <Compile Include="Implementations\SlideManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

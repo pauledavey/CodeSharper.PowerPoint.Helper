@@ -1,15 +1,11 @@
-﻿using PPTHelper = Codesharper.PowerPoint.Helper.Implementations.Presentation;
-using PPTApplication = Codesharper.PowerPoint.Helper.Implementations.PowerPointApplication;
-using PPT = Microsoft.Office.Interop.PowerPoint;
-using OFFICE = Microsoft.Office.Core;
-
-namespace Codesharper.PowerPoint.Helper.Tester
+﻿namespace Codesharper.PowerPoint.Helper.Tester
 {
-    using System;
     using PPT = Microsoft.Office.Interop.PowerPoint;
-    using OFFICE = Microsoft.Office.Core;
-
     using Codesharper.PowerPoint.Helper.Implementations;
+    using PPTHelper = Codesharper.PowerPoint.Helper.Implementations.Presentation;
+    using PPTApplication = Codesharper.PowerPoint.Helper.Implementations.PowerPointApplication;
+    using PPTSlideHelper = Codesharper.PowerPoint.Helper.Implementations.SlideManager;
+
 
     class Program
     {
@@ -19,16 +15,18 @@ namespace Codesharper.PowerPoint.Helper.Tester
             var helper = new PPTHelper();
             var pptAppHelper = new PPTApplication();
             var pptApp = pptAppHelper.CreatePowerPointApplication();
+            var pptSlideHelper = new PPTSlideHelper();
+            
             var shapeHelper = new Shapes();
 
             //create a new PPT application instance
             var presentation = helper.CreatePowerPointPresentation(pptApp, false);
 
             // add slide to the end of the presentation
-            var slideAtEnd = helper.AddSlideAtEndOfPresentation(presentation);
+            var slideAtEnd = pptSlideHelper.AddSlideAtEndOfPresentation(presentation);
 
             // insert slide in to presentation
-            helper.InsertSlideIntoPresentation(presentation, (helper.GetSlideCountInPresentation(presentation) + 1));
+            pptSlideHelper.InsertSlideIntoPresentation(presentation, (pptSlideHelper.GetSlideCountInPresentation(presentation) + 1));
             
             // grab the first slide in the presentation
             var mySlide = presentation.Slides[1];

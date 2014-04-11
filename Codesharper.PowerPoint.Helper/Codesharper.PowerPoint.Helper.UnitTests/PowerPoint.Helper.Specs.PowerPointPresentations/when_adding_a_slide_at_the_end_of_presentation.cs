@@ -12,6 +12,8 @@
 
     using PPT = Microsoft.Office.Interop.PowerPoint;
 
+    
+
     #endregion
 
     public class when_adding_a_slide_at_the_end_of_presentation : SpecsFor<Presentation>
@@ -25,16 +27,19 @@
 
         private int initialSlideCount;
 
+        private SlideManager slideManager;
+
         protected override void Given()
         {
+            slideManager = new SlideManager();
             this.powerpointHandle = new PPT.Application();
             this.presentationHandle = this.SUT.CreatePowerPointPresentation(powerpointHandle,false);
-            initialSlideCount = this.SUT.GetSlideCountInPresentation(presentationHandle);
+            initialSlideCount = this.slideManager.GetSlideCountInPresentation(presentationHandle);
         }
 
         protected override void When()
         {
-            slideHandle = this.SUT.AddSlideAtEndOfPresentation(this.presentationHandle);
+            slideHandle = this.slideManager.AddSlideAtEndOfPresentation(this.presentationHandle);
         }
 
         [Test]
@@ -47,7 +52,7 @@
         [Test]
         public void then_total_number_of_slides_should_increase_by_one()
         {
-            this.SUT.GetSlideCountInPresentation(this.presentationHandle).ShouldBeGreaterThan(initialSlideCount);
+            this.slideManager.GetSlideCountInPresentation(this.presentationHandle).ShouldBeGreaterThan(initialSlideCount);
 
         }
     }

@@ -20,6 +20,8 @@
 
         private readonly Presentation presentationHandler = new Presentation();
 
+        private SlideManager slideManager;
+
         private int indexOfSlide = 1;
 
         private PPT.Presentation presentation;
@@ -41,12 +43,13 @@
         protected override void Given()
         {
             var pptApplication = this.applicationHandler.CreatePowerPointApplication();
+            this.slideManager = new SlideManager();
             this.presentation = this.presentationHandler.CreatePowerPointPresentation(pptApplication,false);
         }
 
         protected override void When()
         {
-            this.slide = this.presentationHandler.InsertSlideIntoPresentation(this.presentation, this.indexOfSlide);
+            this.slide = this.slideManager.InsertSlideIntoPresentation(this.presentation, this.indexOfSlide);
         }
     }
 }

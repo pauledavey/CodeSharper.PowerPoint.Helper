@@ -22,15 +22,16 @@ namespace Codesharper.PowerPoint.Helper.Specs.PowerPoint.Helper.Specs.PowerPoint
         private PPT.Slide slideHandle;
         private PPT.Presentation presentationHandle;
         private PPT.Slide returnedSlide;
-
+        private SlideManager slideManager;
         private Presentation presentation = new Presentation();
         private int slideID;
 
         protected override void Given()
         {
+            slideManager = new SlideManager();
             this.powerpointHandle = new PPT.Application();
             this.presentationHandle = this.SUT.CreatePowerPointPresentation(powerpointHandle,false);
-            slideHandle = this.SUT.AddSlideAtEndOfPresentation(this.presentationHandle);
+            slideHandle = this.slideManager.AddSlideAtEndOfPresentation(this.presentationHandle);
             slideID = slideHandle.SlideID;
         }
 

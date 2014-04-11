@@ -13,7 +13,7 @@ namespace Codesharper.PowerPoint.Helper.Cmdlet
     using Cmdlet = System.Management.Automation.Cmdlet;
 
     [Cmdlet(VerbsCommunications.Send, "Greeting")]
-    public class CreatePowerPointFromTables : Cmdlet
+    public class CreatePowerPointFromTables : PSCmdlet
     {
         [Parameter(Mandatory = true)]
         public PSObject[] objectIn
@@ -24,9 +24,7 @@ namespace Codesharper.PowerPoint.Helper.Cmdlet
 
         protected override void ProcessRecord()
         {
-            foreach (var entry in objectIn)
-
-                
+            foreach (PSObject entry in objectIn)
             {
                 foreach (var innerEntry in entry.Properties)
                 {

@@ -9,15 +9,10 @@
 
     public interface IPresentation
     {
-        PPT.Slide AddSlideAtEndOfPresentation(PPT.Presentation presentationToAddSlideTo);
 
         void ClosePresentation(PPT.Presentation presentationToClose);
 
         PPT.Presentation CreatePowerPointPresentation(PPT.Application powerPointApplication, bool showWindow);
-
-        int GetSlideCountInPresentation(PPT.Presentation presentation);
-
-        PPT.Slide InsertSlideIntoPresentation(PPT.Presentation presentationToAddSlideTo, int indexOfSlide);
 
         PPT.Presentation OpenExistingPowerPointPresentation(
                 PPT.Application powerPointApplication,

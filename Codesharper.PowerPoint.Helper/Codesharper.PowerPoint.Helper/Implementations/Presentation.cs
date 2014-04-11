@@ -15,13 +15,6 @@
 
         private const OFFICE.MsoTriState oTrue = OFFICE.MsoTriState.msoTrue;
 
-        public PPT.Slide AddSlideAtEndOfPresentation(PPT.Presentation presentationToAddSlideTo)
-        {
-            return presentationToAddSlideTo.Slides.Add(
-                    (presentationToAddSlideTo.Slides.Count + 1),
-                    PPT.PpSlideLayout.ppLayoutBlank);
-        }
-
         public void ClosePresentation(PPT.Presentation presentationToClose)
         {
             presentationToClose.Close();
@@ -35,16 +28,6 @@
             }
 
             return powerPointApplication.Presentations.Add(oFalse);
-        }
-
-        public int GetSlideCountInPresentation(PPT.Presentation presentation)
-        {
-            return presentation.Slides.Count;
-        }
-
-        public PPT.Slide InsertSlideIntoPresentation(PPT.Presentation presentationToAddSlideTo, int indexOfSlide)
-        {
-            return presentationToAddSlideTo.Slides.Add(indexOfSlide, PPT.PpSlideLayout.ppLayoutBlank);
         }
 
         public PPT.Presentation OpenExistingPowerPointPresentation(
