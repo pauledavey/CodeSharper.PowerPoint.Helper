@@ -6,6 +6,7 @@
 
     using PPT = Microsoft.Office.Interop.PowerPoint;
     using OFFICE = Microsoft.Office.Core;
+
     using Codesharper.PowerPoint.Helper.Enumerations;
     using Codesharper.PowerPoint.Helper.Objects;
 
@@ -13,6 +14,7 @@
 
     public interface ISlideManager
     {
+        void SetSlideTransition(PPT.Slide slide, PPT.PpEntryEffect effect, PPT.PpTransitionSpeed speed);
 
         PPT.Slide AddSlideToEnd(PPT.Presentation presentationToAddSlideTo);
 
@@ -22,11 +24,19 @@
 
         PPT.Slide InsertSlide(PPT.Presentation presentationToAddSlideTo, int indexOfSlide);
 
-        PPT.SlideRange CloneSlide(PPT.Presentation presentation, PPT.Slide slide, Locations.Location destination, int locationIndex = 0);
+        PPT.SlideRange CloneSlide(
+                PPT.Presentation presentation,
+                PPT.Slide slide,
+                Locations.Location destination,
+                int locationIndex = 0);
 
         PPT.Slide SlideLayout(PPT.Slide slide, PPT.PpSlideLayout slideLayout);
 
-        PPT.Slide MoveSlide(PPT.Presentation presentation, PPT.Slide slide, Locations.Location destination, int locationIndex=0);
+        PPT.Slide MoveSlide(
+                PPT.Presentation presentation,
+                PPT.Slide slide,
+                Locations.Location destination,
+                int locationIndex = 0);
 
         void DeleteSlide(PPT.Slide slide);
 
@@ -37,7 +47,6 @@
         int CountComments(PPT.Slide slide);
 
         List<SlideComment> GetSlideComments(PPT.Slide slide);
-
 
         void Export(
                 PPT.Slide slide,

@@ -1,9 +1,9 @@
 ﻿namespace Codesharper.PowerPoint.Helper.Contracts
 {
+    using System.Collections.Generic;
+
     using PPT = Microsoft.Office.Interop.PowerPoint;
     using OFFICE = Microsoft.Office.Core;
-
-    using System.Security.Cryptography.X509Certificates;
 
     public interface IShapesManager
     {
@@ -15,6 +15,8 @@
                 float heightLocation,
                 float x,
                 float y);
+
+        List<ShapesofType> FindShapesInPresentation(PPT.Presentation presentation, OFFICE.MsoAutoShapeType shapeType);
 
         void SetTextBoxText(PPT.Shape textbox, string text);
 
@@ -37,5 +39,25 @@
                 float topPosition,
                 float width,
                 float height);
+    }
+
+    public class ShapesofType
+    {
+        public PPT.Slide slide
+        {
+            get;
+            set;
+        }
+
+        public PPT.Shape shape
+        {
+            get;
+            set;
+        }
+        public OFFICE.MsoShapeType shapeType
+        {
+            get;
+            set;
+        }
     }
 }

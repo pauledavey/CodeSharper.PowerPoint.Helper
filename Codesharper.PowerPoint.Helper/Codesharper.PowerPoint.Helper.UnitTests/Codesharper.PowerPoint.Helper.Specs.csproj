@@ -71,6 +71,7 @@
     <Compile Include="PowerPoint.Helper.Specs\PowerPoint\when_creating_a_PowerPoint_application.cs" />
     <Compile Include="PowerPoint.Helper.Specs\PowerPoint\when_quitting_a_PowerPoint_application.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_add_a_picture.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_find_all_shapes_of_a_specific_type.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_draw_a_line.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_set_a_textboxs_text.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Slides\when_exporting_all_slides.cs" />

@@ -128,10 +128,21 @@
                     summarySlideCountText,
                     "There are " + pptSlideManager.GetSlideCount(pptPresentation).ToString() + " slides in this presentation!");
 
-            // Move the summary slide to be the first slide in the presentation
+            // Step9. Move the summary slide to be the first slide in the presentation
             pptSlideManager.MoveSlide(pptPresentation, summarySlide, Locations.Location.First);
+            
+            // Step10. Set transition effects for each slide in the presentation
+            foreach (PPT.Slide currSlide in pptPresentation.Slides)
+            {
+                pptSlideManager.SetSlideTransition(
+                        currSlide,
+                        PPT.PpEntryEffect.ppEffectBlindsVertical,
+                        PPT.PpTransitionSpeed.ppTransitionSpeedMedium);
+            }
 
-            // Step 9. Save the presentation to c:\temp\testPPT.pptx and open it
+            
+
+            // Step 99. Save the presentation to c:\temp\testPPT.pptx and open it
             pptPresentationManager.SavePresentationAs(
                     pptPresentation,
                     presentationFile,
@@ -139,16 +150,16 @@
                     true);
             
 
-            // Step 10a. Export the first slide in the presentation
+            // Step 100a. Export the first slide in the presentation
             pptSlideManager.Export(pptPresentation.Slides[1], @"C:\temp\firstslide.png", ImageFormats.Formats.png);
 
-            // Step 10b. Export all slides in the presentation as PNG
+            // Step 100b. Export all slides in the presentation as PNG
             pptSlideManager.ExportAll(pptPresentation, @"C:\temp\", ImageFormats.Formats.png);
 
-            // Step 10c. Export all slides in the presentation as PNG
+            // Step 100c. Export all slides in the presentation as PNG
             pptSlideManager.ExportAll(pptPresentation, @"C:\temp\", ImageFormats.Formats.jpg);
 
-            // Step 10d. Export all slides in the presentation as PNG
+            // Step 100d. Export all slides in the presentation as PNG
             pptSlideManager.ExportAll(pptPresentation, @"C:\temp\", ImageFormats.Formats.bmp);
 
             pptPresentationManager.ClosePresentation(pptPresentation);
