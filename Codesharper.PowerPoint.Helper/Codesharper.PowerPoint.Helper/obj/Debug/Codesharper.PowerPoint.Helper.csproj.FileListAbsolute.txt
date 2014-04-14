@@ -1,4 +1,0 @@
-C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\bin\Debug\Codesharper.PowerPoint.Helper.dll
-C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\bin\Debug\Codesharper.PowerPoint.Helper.pdb
-C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\obj\Debug\Codesharper.PowerPoint.Helper.dll
-C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\obj\Debug\Codesharper.PowerPoint.Helper.pdb

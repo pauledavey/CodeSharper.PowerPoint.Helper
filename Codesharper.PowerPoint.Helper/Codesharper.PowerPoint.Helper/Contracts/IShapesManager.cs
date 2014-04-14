@@ -2,6 +2,8 @@
 {
     using System.Collections.Generic;
 
+    using Codesharper.PowerPoint.Helper.Objects;
+
     using PPT = Microsoft.Office.Interop.PowerPoint;
     using OFFICE = Microsoft.Office.Core;
 
@@ -39,25 +41,5 @@
                 float topPosition,
                 float width,
                 float height);
-    }
-
-    public class ShapesofType
-    {
-        public PPT.Slide slide
-        {
-            get;
-            set;
-        }
-
-        public PPT.Shape shape
-        {
-            get;
-            set;
-        }
-        public OFFICE.MsoShapeType shapeType
-        {
-            get;
-            set;
-        }
     }
 }

@@ -4,6 +4,7 @@
     using System.Linq;
 
     using Codesharper.PowerPoint.Helper.Contracts;
+    using Codesharper.PowerPoint.Helper.Objects;
 
     using PPT = Microsoft.Office.Interop.PowerPoint;
     using OFFICE = Microsoft.Office.Core;

@@ -4,6 +4,7 @@
 
     using Codesharper.PowerPoint.Helper.Contracts;
     using Codesharper.PowerPoint.Helper.Implementations;
+    using Codesharper.PowerPoint.Helper.Objects;
 
     using Microsoft.Office.Core;
 
