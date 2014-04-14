@@ -37,5 +37,20 @@
         int CountComments(PPT.Slide slide);
 
         List<SlideComment> GetSlideComments(PPT.Slide slide);
+
+
+        void Export(
+                PPT.Slide slide,
+                string filePathAndName,
+                ImageFormats.Formats exportFormat,
+                int scaleWidth = 1280,
+                int scaleHeight = 1024);
+
+        void ExportAll(
+                PPT.Presentation presentation,
+                string filePath,
+                ImageFormats.Formats exportFormat,
+                int scaleWidth = 1280,
+                int scaleHeight = 1024);
     }
 }

@@ -73,6 +73,8 @@
     <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_add_a_picture.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_draw_a_line.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_set_a_textboxs_text.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_exporting_all_slides.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Slides\when_exporting_a_slide.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Slides\when_getting_a_slide_comment.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Slides\when_asked_to_count_slide_comments.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Slides\when_deleting_a_slide_comment.cs" />

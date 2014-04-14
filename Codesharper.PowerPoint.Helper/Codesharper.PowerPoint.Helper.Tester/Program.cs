@@ -137,6 +137,20 @@
                     presentationFile,
                     PPT.PpSaveAsFileType.ppSaveAsPresentation,
                     true);
+            
+
+            // Step 10a. Export the first slide in the presentation
+            pptSlideManager.Export(pptPresentation.Slides[1], @"C:\temp\firstslide.png", ImageFormats.Formats.png);
+
+            // Step 10b. Export all slides in the presentation as PNG
+            pptSlideManager.ExportAll(pptPresentation, @"C:\temp\", ImageFormats.Formats.png);
+
+            // Step 10c. Export all slides in the presentation as PNG
+            pptSlideManager.ExportAll(pptPresentation, @"C:\temp\", ImageFormats.Formats.jpg);
+
+            // Step 10d. Export all slides in the presentation as PNG
+            pptSlideManager.ExportAll(pptPresentation, @"C:\temp\", ImageFormats.Formats.bmp);
+
             pptPresentationManager.ClosePresentation(pptPresentation);
 
             Process.Start(presentationFile);

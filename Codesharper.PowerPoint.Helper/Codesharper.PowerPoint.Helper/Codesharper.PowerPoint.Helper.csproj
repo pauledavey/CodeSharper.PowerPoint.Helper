@@ -44,6 +44,7 @@
     <Compile Include="Contracts\IPresentationManager.cs" />
     <Compile Include="Contracts\IShapesManager.cs" />
     <Compile Include="Contracts\ISlideManager.cs" />
+    <Compile Include="Enumerations\ImageFormats.cs" />
     <Compile Include="Enumerations\Locations.cs" />
     <Compile Include="Implementations\PowerPointApplicationManager.cs" />
     <Compile Include="Implementations\PresentationManager.cs" />
