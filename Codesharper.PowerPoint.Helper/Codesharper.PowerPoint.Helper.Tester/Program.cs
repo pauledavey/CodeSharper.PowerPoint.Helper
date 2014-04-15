@@ -140,18 +140,9 @@
                         PPT.PpTransitionSpeed.ppTransitionSpeedMedium);
             }
 
-
-            //// Step11. Create a chart and add it to the last slide
-            //PPT.Shape chartShape = lastSlide.Shapes.AddChart(XlChartType.xlLine, 20f, 30f, 400f, 300f);
-
-            //PPT.Chart chart = (PPT.Chart)chartShape.Chart;
-            //Microsoft.Office.Interop.PowerPoint.ChartData chartData = chart.ChartData;
-
-            //var dataWorkbook = (Microsoft.Office.Interop.Excel.Workbook)chartData.Workbook;
-            //Microsoft.Office.Interop.Excel.Worksheet dataSheet = dataWorkbook.Worksheets[1];
-
-            //dataSheet.Columns.Clear();
-            //d
+            // Step11. Lets do some Charting!!
+            lastSlide = pptSlideManager.AddSlideToEnd(pptPresentation);
+            pptChartManager.CreateChart(lastSlide);
 
 
             // Step 99. Save the presentation to c:\temp\testPPT.pptx and open it

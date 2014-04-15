@@ -15,7 +15,7 @@
     public interface ISlideManager
     {
 
-        int GetSlideDimensions(PPT.Slide slide);
+        SlideDimensions GetSlideDimensions(PPT.Presentation presentation);
 
         void SetSlideTransition(PPT.Slide slide, PPT.PpEntryEffect effect, PPT.PpTransitionSpeed speed);
 
