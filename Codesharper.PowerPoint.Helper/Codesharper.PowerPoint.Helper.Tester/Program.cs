@@ -1,13 +1,12 @@
 ﻿namespace Codesharper.PowerPoint.Helper.Tester
 {
+    using System;
     using System.Diagnostics;
 
     using Codesharper.PowerPoint.Helper.Enumerations;
     using Codesharper.PowerPoint.Helper.Implementations;
     using Codesharper.PowerPoint.Helper.Objects;
-
     using Microsoft.Office.Core;
-
     using PPT = Microsoft.Office.Interop.PowerPoint;
 
     internal class Program
@@ -31,6 +30,7 @@
             var pptSlideManager = new SlideManager();
             var pptShapeManager = new ShapesManager();
             var pptPresentationManager = new PresentationManager();
+            var pptChartManager = new ChartManager();
 
             // Step 1. Create a PowerPoint application instance
             PPT.Application pptApplication = pptApplicationManager.CreatePowerPointApplication();
@@ -38,7 +38,7 @@
             // Step 2. Create a new PowerPoint presentation
             PPT.Presentation pptPresentation = pptPresentationManager.CreatePowerPointPresentation(
                     pptApplication,
-                    false);
+                    true);
 
             // Step 3. Add a slide to the end of the presentation
             PPT.Slide lastSlide = pptSlideManager.AddSlideToEnd(pptPresentation);
@@ -140,7 +140,19 @@
                         PPT.PpTransitionSpeed.ppTransitionSpeedMedium);
             }
 
-            
+
+            //// Step11. Create a chart and add it to the last slide
+            //PPT.Shape chartShape = lastSlide.Shapes.AddChart(XlChartType.xlLine, 20f, 30f, 400f, 300f);
+
+            //PPT.Chart chart = (PPT.Chart)chartShape.Chart;
+            //Microsoft.Office.Interop.PowerPoint.ChartData chartData = chart.ChartData;
+
+            //var dataWorkbook = (Microsoft.Office.Interop.Excel.Workbook)chartData.Workbook;
+            //Microsoft.Office.Interop.Excel.Worksheet dataSheet = dataWorkbook.Worksheets[1];
+
+            //dataSheet.Columns.Clear();
+            //d
+
 
             // Step 99. Save the presentation to c:\temp\testPPT.pptx and open it
             pptPresentationManager.SavePresentationAs(

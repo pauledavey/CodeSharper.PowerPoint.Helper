@@ -241,6 +241,19 @@
         }
 
         /// <summary>
+        /// Retuns the dimensions of the slide (width and height)
+        /// </summary>
+        /// <param name="presentation">The presentation object (all slides are the same size)</param>
+        /// <returns>a SlideDimensions object containing the height and width a slide will have in the presentation</returns>
+        public SlideDimensions GetSlideDimensions(PPT.Presentation presentation)
+        {
+            return new SlideDimensions() { slideHeight = presentation.PageSetup.SlideHeight, 
+                                           slideWidth = presentation.PageSetup.SlideWidth
+                                         };
+        }
+
+
+        /// <summary>
         ///     Configure slide transiton effect for when a slide is loading
         /// </summary>
         /// <param name="slide">PPT.Slide object instance</param>

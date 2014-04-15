@@ -40,18 +40,21 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IChartManager.cs" />
     <Compile Include="Contracts\IPowerPointManager.cs" />
     <Compile Include="Contracts\IPresentationManager.cs" />
     <Compile Include="Contracts\IShapesManager.cs" />
     <Compile Include="Contracts\ISlideManager.cs" />
     <Compile Include="Enumerations\ImageFormats.cs" />
     <Compile Include="Enumerations\Locations.cs" />
+    <Compile Include="Implementations\ChartManager.cs" />
     <Compile Include="Implementations\PowerPointApplicationManager.cs" />
     <Compile Include="Implementations\PresentationManager.cs" />
     <Compile Include="Implementations\ShapesManager.cs" />
     <Compile Include="Implementations\SlideManager.cs" />
     <Compile Include="Objects\ShapesofType.cs" />
     <Compile Include="Objects\SlideComment.cs" />
+    <Compile Include="Objects\SlideDimensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

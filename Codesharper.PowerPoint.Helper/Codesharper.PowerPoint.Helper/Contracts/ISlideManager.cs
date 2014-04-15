@@ -14,6 +14,9 @@
 
     public interface ISlideManager
     {
+
+        int GetSlideDimensions(PPT.Slide slide);
+
         void SetSlideTransition(PPT.Slide slide, PPT.PpEntryEffect effect, PPT.PpTransitionSpeed speed);
 
         PPT.Slide AddSlideToEnd(PPT.Presentation presentationToAddSlideTo);

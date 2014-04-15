@@ -1,0 +1,8 @@
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Tester\obj\Debug\Codesharper.PowerPoint.Helper.Tester.csprojResolveAssemblyReference.cache
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Tester\bin\Debug\Codesharper.PowerPoint.Helper.Tester.exe.config
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Tester\bin\Debug\Codesharper.PowerPoint.Helper.Tester.exe
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Tester\bin\Debug\Codesharper.PowerPoint.Helper.Tester.pdb
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Tester\bin\Debug\Codesharper.PowerPoint.Helper.dll
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Tester\bin\Debug\Codesharper.PowerPoint.Helper.pdb
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Tester\obj\Debug\Codesharper.PowerPoint.Helper.Tester.exe
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.Tester\obj\Debug\Codesharper.PowerPoint.Helper.Tester.pdb
