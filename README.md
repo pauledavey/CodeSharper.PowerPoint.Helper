@@ -1,4 +1,4 @@
-codesharper.PowerPoint.Helper
+CodeSharper.PowerPoint.Helper
 =============================
 
 A Helper library to make using PowerPoint in c# easier!
