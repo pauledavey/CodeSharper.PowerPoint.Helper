@@ -11,7 +11,7 @@
 
     internal class Program
     {
-        private const string presentationFile = @"c:\temp\testPPT.ppt";
+        private const string presentationFile = @"c:\temp\testPPT.pptx";
 
         /// <summary>
         ///     Utility method to determine if a number if odd or even
@@ -149,7 +149,7 @@
             pptPresentationManager.SavePresentationAs(
                     pptPresentation,
                     presentationFile,
-                    PPT.PpSaveAsFileType.ppSaveAsPresentation,
+                    PPT.PpSaveAsFileType.ppSaveAsOpenXMLPresentation,
                     true);
             
 
@@ -166,6 +166,7 @@
             pptSlideManager.ExportAll(pptPresentation, @"C:\temp\", ImageFormats.Formats.bmp);
 
             pptPresentationManager.ClosePresentation(pptPresentation);
+            pptApplicationManager.ClosePowerPointApplication(pptApplication);
 
             Process.Start(presentationFile);
         }
