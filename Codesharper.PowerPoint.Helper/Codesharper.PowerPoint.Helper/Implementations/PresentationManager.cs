@@ -40,16 +40,6 @@
             return powerPointApplication.Presentations.Add(oFalse);
         }
 
-        /// <summary>
-        /// Find a slide using its slide index ID
-        /// </summary>
-        /// <param name="presentation">Handle to a PPT.Presentation object to search through</param>
-        /// <param name="slideId">SlideID to search for</param>
-        /// <returns></returns>
-        public PPT.Slide FindSlideByItsID(PPT.Presentation presentation, int slideId)
-        {
-            return presentation.Slides.FindBySlideID(slideId);
-        }
 
         /// <summary>
         /// Open an existing PowerPoint presentation

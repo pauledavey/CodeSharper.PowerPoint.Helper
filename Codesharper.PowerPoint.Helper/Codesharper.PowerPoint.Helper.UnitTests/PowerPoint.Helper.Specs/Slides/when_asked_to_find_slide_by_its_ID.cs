@@ -8,7 +8,7 @@
 
     using SpecsFor;
 
-    public class when_asked_to_find_slide_by_its_ID : SpecsFor<PresentationManager>
+    public class when_asked_to_find_slide_by_its_ID : SpecsFor<SlideManager>
     {
         private Microsoft.Office.Interop.PowerPoint.Application powerpointHandle;
         private Microsoft.Office.Interop.PowerPoint.Slide slideHandle;
@@ -22,7 +22,7 @@
         {
             this.slideManager = new SlideManager();
             this.powerpointHandle = new Microsoft.Office.Interop.PowerPoint.Application();
-            this.presentationHandle = this.SUT.CreatePowerPointPresentation(this.powerpointHandle,false);
+            this.presentationHandle = this.presentation.CreatePowerPointPresentation(this.powerpointHandle,false);
             this.slideHandle = this.slideManager.AddSlideToEnd(this.presentationHandle);
             this.slideID = this.slideHandle.SlideID;
         }
