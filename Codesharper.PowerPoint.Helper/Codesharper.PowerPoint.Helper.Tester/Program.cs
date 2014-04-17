@@ -1,15 +1,19 @@
 ﻿namespace Codesharper.PowerPoint.Helper.Tester
 {
-    using System;
+    #region Using Directives
+
     using System.Collections.Generic;
-    using System.Diagnostics;
 
     using Codesharper.PowerPoint.Helper.Contracts;
     using Codesharper.PowerPoint.Helper.Enumerations;
     using Codesharper.PowerPoint.Helper.Implementations;
     using Codesharper.PowerPoint.Helper.Objects;
+
     using Microsoft.Office.Core;
+
     using PPT = Microsoft.Office.Interop.PowerPoint;
+
+    #endregion
 
     internal class Program
     {
@@ -38,9 +42,7 @@
             PPT.Application pptApplication = pptApplicationManager.CreatePowerPointApplication();
 
             // Step 2. Create a new PowerPoint presentation
-            PPT.Presentation pptPresentation = pptPresentationManager.CreatePowerPointPresentation(
-                    pptApplication,
-                    true);
+            PPT.Presentation pptPresentation = pptPresentationManager.CreatePowerPointPresentation(pptApplication, true);
 
             // Step 3. Add a slide to the end of the presentation
             PPT.Slide lastSlide = pptSlideManager.AddSlideToEnd(pptPresentation);
@@ -128,11 +130,12 @@
             // Step 8c. Set the text to the number of slides in the presentation
             pptShapeManager.SetTextBoxText(
                     summarySlideCountText,
-                    "There are " + pptSlideManager.GetSlideCount(pptPresentation).ToString() + " slides in this presentation!");
+                    "There are " + pptSlideManager.GetSlideCount(pptPresentation).ToString()
+                    + " slides in this presentation!");
 
             // Step9. Move the summary slide to be the first slide in the presentation
             pptSlideManager.MoveSlide(pptPresentation, summarySlide, Locations.Location.First);
-            
+
             // Step10. Set transition effects for each slide in the presentation
             foreach (PPT.Slide currSlide in pptPresentation.Slides)
             {
@@ -155,16 +158,43 @@
                                    };
 
             var chartSeries2 = new ChartSeries()
-            {
-                name = "Codesharper Series",
-                seriesData = new string[] { "1000", "2000", "3000", "3050", "2200" },
-                seriesType = XlChartType.xlArea
-            };
+                                   {
+                                           name = "Codesharper Series",
+                                           seriesData = new string[] { "1000", "2000", "3000", "3050", "2200" },
+                                           seriesType = XlChartType.xlArea
+                                   };
 
             var seriesData = new List<ChartSeries> { chartSeries1, chartSeries2 };
 
-            pptChartManager.CreateChart(lastSlide, columns, seriesData);
-            
+            var chart = pptChartManager.CreateChart(lastSlide, columns, seriesData);
+
+            var chartSeries3 = new ChartSeries()
+            {
+                name = "Codesharper2 Series",
+                seriesData = new string[] { "2500", "3500", "4500", "5500", "6500" },
+                seriesType = XlChartType.xlLine
+            };
+
+            pptChartManager.AddSeriesToExistingChart(chart, chartSeries3);
+
+
+
+
+
+            pptChartManager.AddChartTitle(
+                    chart,
+                    new ChartTitle()
+                        {
+                                bold = true,
+                                fontSize = 14,
+                                italic = false,
+                                titleText = "Welcome to my Chart!",
+                                underline = false
+                        });
+
+            pptChartManager.AddChartLegend(
+                    chart,
+                    new ChartLegend() { bold = true, fontSize = 14, italic = false, underline = false });
 
             // Step 99. Save the presentation to c:\temp\testPPT.pptx and open it
             pptPresentationManager.SavePresentationAs(
@@ -172,7 +202,6 @@
                     presentationFile,
                     PPT.PpSaveAsFileType.ppSaveAsOpenXMLPresentation,
                     true);
-            
 
             // Step 100a. Export the first slide in the presentation
             pptSlideManager.Export(pptPresentation.Slides[1], @"C:\temp\firstslide.png", ImageFormats.Formats.png);

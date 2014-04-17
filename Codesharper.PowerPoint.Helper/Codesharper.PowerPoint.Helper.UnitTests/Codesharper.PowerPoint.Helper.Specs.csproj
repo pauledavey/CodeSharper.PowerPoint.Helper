@@ -35,6 +35,7 @@
     <Reference Include="ExpectedObjects">
       <HintPath>..\packages\ExpectedObjects.1.1.1\lib\net40\ExpectedObjects.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -68,6 +69,10 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PowerPoint.Helper.Specs\Charts\when_asked_to_add_a_title_to_a_chart.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Charts\when_asked_to_add_a_series_to_an_existing_chart.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Charts\when_asked_to_add_a_legend_to_a_chart.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Charts\when_asked_to_create_a_chart.cs" />
     <Compile Include="PowerPoint.Helper.Specs\PowerPoint\when_creating_a_PowerPoint_application.cs" />
     <Compile Include="PowerPoint.Helper.Specs\PowerPoint\when_quitting_a_PowerPoint_application.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_add_a_picture.cs" />
