@@ -1,6 +1,7 @@
 ﻿namespace Codesharper.PowerPoint.Helper.Tester
 {
     using System;
+    using System.Collections.Generic;
     using System.Diagnostics;
 
     using Codesharper.PowerPoint.Helper.Enumerations;
@@ -142,8 +143,21 @@
 
             // Step11. Lets do some Charting!!
             lastSlide = pptSlideManager.AddSlideToEnd(pptPresentation);
-            pptChartManager.CreateChart(lastSlide);
 
+            // Defining Chart Data
+            List<string[]> dataSets = new List<string[]>();
+
+            var columns = new string[] { "Bananas", "Apples", "Oranges", "Pears", "Grapes" };
+            var dataset1 = new string[] { "100", "200", "300", "400", "50" };
+            var dataset2 = new string[] { "300", "500", "700", "900", "90" };
+            var dataset3 = new string[] { "1100", "1300", "1500", "1700", "33" };
+
+            dataSets.Add(dataset1);
+            dataSets.Add(dataset2);
+            dataSets.Add(dataset3);
+
+            pptChartManager.CreateChart(lastSlide, columns, dataSets);
+            
 
             // Step 99. Save the presentation to c:\temp\testPPT.pptx and open it
             pptPresentationManager.SavePresentationAs(
@@ -167,8 +181,6 @@
 
             pptPresentationManager.ClosePresentation(pptPresentation);
             pptApplicationManager.ClosePowerPointApplication(pptApplication);
-
-            Process.Start(presentationFile);
         }
     }
 }

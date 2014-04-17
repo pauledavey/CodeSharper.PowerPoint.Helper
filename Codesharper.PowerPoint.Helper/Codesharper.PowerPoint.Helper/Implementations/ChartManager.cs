@@ -2,8 +2,10 @@
 namespace Codesharper.PowerPoint.Helper.Implementations
 {
     using System;
+    using System.Collections.Generic;
     using System.Diagnostics;
     using System.Drawing;
+    using System.Linq;
 
     using Microsoft.Office.Core;
 
@@ -15,32 +17,40 @@ namespace Codesharper.PowerPoint.Helper.Implementations
 
     public class ChartManager : IChartManager
     {
+        //public PPT.Chart CreateChart(PPT.Slide slide, ChartConfiguration chartConfiguration)
+        //{
+        //    return slide.Shapes.AddChart(
+        //            chartConfiguration.chartType,
+        //            chartConfiguration.xLocation,
+        //            chartConfiguration.yLocation,
+        //            chartConfiguration.width,
+        //            chartConfiguration.height).Chart;
+        //}
+
+        private static string IntToLetters(int value)
+        {
+            var result = string.Empty;
+            while (--value >= 0)
+            {
+                result = (char)('A' + value % 26) + result;
+                value /= 26;
+            }
+            return result;
+        }
 
 
-        public void CreateChart(PPT.Slide slide)
+        public void CreateChart(PPT.Slide slide, string[] xAxisPoints, List<string[]> datasets )
         {
             slide.Layout = PPT.PpSlideLayout.ppLayoutBlank;
             var chart = slide.Shapes.AddChart(XlChartType.xlLine, 10f, 10f, 900f, 400f).Chart;
-            
+
             var workbook = (EXCEL.Workbook)chart.ChartData.Workbook;
             workbook.Windows.Application.Visible = false;
 
             var dataSheet = (EXCEL.Worksheet)workbook.Worksheets[1];
             dataSheet.Cells.ClearContents();
-            
-
-            dataSheet.Cells.Range["A1"].Value2 = "Bananas";
-            dataSheet.Cells.Range["A2"].Value2 = "Apples";
-            dataSheet.Cells.Range["A3"].Value2 = "Pears";
-            dataSheet.Cells.Range["A4"].Value2 = "Oranges";
-            dataSheet.Cells.Range["B1"].Value2 = "1000";
-            dataSheet.Cells.Range["B2"].Value2 = "2500";
-            dataSheet.Cells.Range["B3"].Value2 = "4000";
-            dataSheet.Cells.Range["B4"].Value2 = "3000";
-            dataSheet.Cells.Range["C1"].Value2 = "1000";
-            dataSheet.Cells.Range["C2"].Value2 = "2500";
-            dataSheet.Cells.Range["C3"].Value2 = "2300";
-            dataSheet.Cells.Range["C4"].Value2 = "1940";
+            dataSheet.Cells.Clear();
+            dataSheet.Calculate();
 
             var sc = (PPT.SeriesCollection)chart.SeriesCollection();
 
@@ -52,24 +62,57 @@ namespace Codesharper.PowerPoint.Helper.Implementations
             }
             while (sc.Count != 0);
 
-            var series1 = sc.NewSeries();
-            series1.Name = "Pauls Series";
-            series1.XValues = "'Sheet1'!$A$1:$A$4";
-            series1.Values = "'Sheet1'!$B$1:$B$4";
-            series1.ChartType = XlChartType.xlLine;
-            
-            var series2 = sc.NewSeries();
-            series2.Name = "Seans Series";
-            series2.XValues = "'Sheet1'!$A$1:$A$4";
-            series2.Values = "'Sheet1'!$B$1:$B$4";
-            series2.ChartType = XlChartType.xlLine;
+            //Build out the X-Axis Data Categories
+            for (int i = 1; i != (xAxisPoints.Count() + 1); i++)
+            {
+                dataSheet.Cells.Range["A" + i].Value2 = xAxisPoints[(i - 1)];
+                chart.Refresh();
+            }
 
-            var series3 = sc.NewSeries();
-            series3.Name = "James Series";
-            series3.XValues = "'Sheet1'!$A$1:$A$4";
-            series3.Values = "'Sheet1'!$C$1:$C$4";
-            series3.ChartType = XlChartType.xlLine; 
-            
+            var intLetter = 1;
+            var cellNumber = 1;
+
+            for (int j = 0; j < datasets.Count; j++)
+            {
+                var letter = IntToLetters((intLetter + 1));
+
+                // each one of these is a dataset.
+                foreach (var value in datasets[j])
+                {
+                    var cellPosition = letter + cellNumber.ToString();
+                    dataSheet.Cells.Range[cellPosition].Value2 = value;
+                    cellNumber++;
+                    chart.Refresh();
+                }
+
+                // we have populate the sheet with new values, now we need to create a series for it!
+                EXCEL.Range columnsRange = dataSheet.UsedRange.Columns;
+                EXCEL.Range rowsRange = dataSheet.UsedRange.Rows;
+
+                var columnCount = columnsRange.Columns.Count;
+                var rowCount = rowsRange.Rows.Count;
+                var lastColumnLetter = IntToLetters(columnCount);
+
+                var newSeries = sc.NewSeries();
+                newSeries.Name = "Series" + j;
+                newSeries.XValues = "'Sheet1'!$A$1:$A$" + rowCount;
+                newSeries.Values = "'Sheet1'!$" + lastColumnLetter + "$1:$" + lastColumnLetter + "$" + rowCount;
+
+                if (j == 2)
+                {
+                    newSeries.ChartType = XlChartType.xlArea;
+                }
+                else
+                {
+                    newSeries.ChartType = XlChartType.xlLine;
+                }
+                
+
+                intLetter++;
+                cellNumber = 1;
+                chart.Refresh();
+            }
+
             chart.HasTitle = true;
             chart.ChartTitle.Font.Italic = true;
             chart.ChartTitle.Text = "My First Chart!";
@@ -83,8 +126,6 @@ namespace Codesharper.PowerPoint.Helper.Implementations
             chart.Legend.Font.Size = 10;
 
             chart.Refresh();
-
-        
         }
 
         public void AddChartTitle(PPT.Shape chart, string titleText)
