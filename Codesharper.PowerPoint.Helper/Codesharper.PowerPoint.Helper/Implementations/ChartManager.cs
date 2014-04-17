@@ -20,11 +20,10 @@ namespace Codesharper.PowerPoint.Helper.Implementations
         public void CreateChart(PPT.Slide slide)
         {
             slide.Layout = PPT.PpSlideLayout.ppLayoutBlank;
-
             var chart = slide.Shapes.AddChart(XlChartType.xlLine, 10f, 10f, 900f, 400f).Chart;
             
             var workbook = (EXCEL.Workbook)chart.ChartData.Workbook;
-            workbook.Windows.Application.Visible = true;
+            workbook.Windows.Application.Visible = false;
 
             var dataSheet = (EXCEL.Worksheet)workbook.Worksheets[1];
             dataSheet.Cells.ClearContents();
@@ -38,6 +37,10 @@ namespace Codesharper.PowerPoint.Helper.Implementations
             dataSheet.Cells.Range["B2"].Value2 = "2500";
             dataSheet.Cells.Range["B3"].Value2 = "4000";
             dataSheet.Cells.Range["B4"].Value2 = "3000";
+            dataSheet.Cells.Range["C1"].Value2 = "1000";
+            dataSheet.Cells.Range["C2"].Value2 = "2500";
+            dataSheet.Cells.Range["C3"].Value2 = "2300";
+            dataSheet.Cells.Range["C4"].Value2 = "1940";
 
             var sc = (PPT.SeriesCollection)chart.SeriesCollection();
 
@@ -45,20 +48,27 @@ namespace Codesharper.PowerPoint.Helper.Implementations
             {
                 var seriesToDelete = sc.Item(1);
                 seriesToDelete.Delete();
+                chart.Refresh();
             }
             while (sc.Count != 0);
 
             var series1 = sc.NewSeries();
             series1.Name = "Pauls Series";
-            series1.XValues = "'Sheet1'!$A$1:$A$2";
-            series1.Values = "'Sheet1'!$B$1:$B$2";
+            series1.XValues = "'Sheet1'!$A$1:$A$4";
+            series1.Values = "'Sheet1'!$B$1:$B$4";
             series1.ChartType = XlChartType.xlLine;
-           
+            
             var series2 = sc.NewSeries();
             series2.Name = "Seans Series";
-            series2.XValues = "'Sheet1'!$A$1:$A$2";
-            series2.Values = "'Sheet1'!$B$3:$B$4";
-            series2.ChartType = XlChartType.xlLine; 
+            series2.XValues = "'Sheet1'!$A$1:$A$4";
+            series2.Values = "'Sheet1'!$B$1:$B$4";
+            series2.ChartType = XlChartType.xlLine;
+
+            var series3 = sc.NewSeries();
+            series3.Name = "James Series";
+            series3.XValues = "'Sheet1'!$A$1:$A$4";
+            series3.Values = "'Sheet1'!$C$1:$C$4";
+            series3.ChartType = XlChartType.xlLine; 
             
             chart.HasTitle = true;
             chart.ChartTitle.Font.Italic = true;
