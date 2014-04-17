@@ -21,6 +21,27 @@ namespace Codesharper.PowerPoint.Helper.Contracts
 
     }
 
+    public class ChartSeries
+    {
+        public string name
+        {
+            get;
+            set;
+        }
+
+        public string[] seriesData
+        {
+            get;
+            set;
+        }
+
+        public XlChartType seriesType
+        {
+            get;
+            set;
+        }
+    }
+
     public class ChartConfiguration
     {
         public XlChartType chartType

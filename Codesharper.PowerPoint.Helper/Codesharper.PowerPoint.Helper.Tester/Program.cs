@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Diagnostics;
 
+    using Codesharper.PowerPoint.Helper.Contracts;
     using Codesharper.PowerPoint.Helper.Enumerations;
     using Codesharper.PowerPoint.Helper.Implementations;
     using Codesharper.PowerPoint.Helper.Objects;
@@ -145,18 +146,24 @@
             lastSlide = pptSlideManager.AddSlideToEnd(pptPresentation);
 
             // Defining Chart Data
-            List<string[]> dataSets = new List<string[]>();
-
             var columns = new string[] { "Bananas", "Apples", "Oranges", "Pears", "Grapes" };
-            var dataset1 = new string[] { "100", "200", "300", "400", "50" };
-            var dataset2 = new string[] { "300", "500", "700", "900", "90" };
-            var dataset3 = new string[] { "1100", "1300", "1500", "1700", "33" };
+            var chartSeries1 = new ChartSeries()
+                                   {
+                                           name = "Pauls Series",
+                                           seriesData = new string[] { "100", "200", "300", "400", "50" },
+                                           seriesType = XlChartType.xlLine
+                                   };
 
-            dataSets.Add(dataset1);
-            dataSets.Add(dataset2);
-            dataSets.Add(dataset3);
+            var chartSeries2 = new ChartSeries()
+            {
+                name = "Codesharper Series",
+                seriesData = new string[] { "1000", "2000", "3000", "3050", "2200" },
+                seriesType = XlChartType.xlArea
+            };
 
-            pptChartManager.CreateChart(lastSlide, columns, dataSets);
+            var seriesData = new List<ChartSeries> { chartSeries1, chartSeries2 };
+
+            pptChartManager.CreateChart(lastSlide, columns, seriesData);
             
 
             // Step 99. Save the presentation to c:\temp\testPPT.pptx and open it

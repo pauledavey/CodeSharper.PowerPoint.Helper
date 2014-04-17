@@ -39,7 +39,7 @@ namespace Codesharper.PowerPoint.Helper.Implementations
         }
 
 
-        public void CreateChart(PPT.Slide slide, string[] xAxisPoints, List<string[]> datasets )
+        public void CreateChart(PPT.Slide slide, string[] xAxisPoints, List<ChartSeries> datasets )
         {
             slide.Layout = PPT.PpSlideLayout.ppLayoutBlank;
             var chart = slide.Shapes.AddChart(XlChartType.xlLine, 10f, 10f, 900f, 400f).Chart;
@@ -77,7 +77,7 @@ namespace Codesharper.PowerPoint.Helper.Implementations
                 var letter = IntToLetters((intLetter + 1));
 
                 // each one of these is a dataset.
-                foreach (var value in datasets[j])
+                foreach (var value in datasets[j].seriesData)
                 {
                     var cellPosition = letter + cellNumber.ToString();
                     dataSheet.Cells.Range[cellPosition].Value2 = value;
@@ -94,20 +94,11 @@ namespace Codesharper.PowerPoint.Helper.Implementations
                 var lastColumnLetter = IntToLetters(columnCount);
 
                 var newSeries = sc.NewSeries();
-                newSeries.Name = "Series" + j;
+                newSeries.Name = datasets[j].name;
                 newSeries.XValues = "'Sheet1'!$A$1:$A$" + rowCount;
                 newSeries.Values = "'Sheet1'!$" + lastColumnLetter + "$1:$" + lastColumnLetter + "$" + rowCount;
-
-                if (j == 2)
-                {
-                    newSeries.ChartType = XlChartType.xlArea;
-                }
-                else
-                {
-                    newSeries.ChartType = XlChartType.xlLine;
-                }
+                newSeries.ChartType = datasets[j].seriesType;
                 
-
                 intLetter++;
                 cellNumber = 1;
                 chart.Refresh();
