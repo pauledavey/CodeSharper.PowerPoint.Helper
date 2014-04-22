@@ -6,6 +6,8 @@ A Helper library to make using PowerPoint in c# easier!
 There is an included console project that has contains some sample code.
 Unit tests are included - have a look to see how to use features of the helper class
 
+There is also an example PowerPoint presentation file that has been generated from the example console program in the root of the repository.
+
 Some of the features contained in the helper library include:
 
 PowerPoint Application
