@@ -11,6 +11,12 @@
 
     public class ShapesManager : IShapesManager
     {
+
+        public ShapesManager()
+        {
+            
+        }
+
         /// <summary>
         ///     Add an existing picture to a slide
         /// </summary>

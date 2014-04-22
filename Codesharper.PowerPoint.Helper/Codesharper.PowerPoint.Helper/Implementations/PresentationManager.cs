@@ -15,6 +15,11 @@
 
         private const OFFICE.MsoTriState oTrue = OFFICE.MsoTriState.msoTrue;
 
+        public PresentationManager()
+        {
+            
+        }
+
         /// <summary>
         /// A PowerPoint presentation to close
         /// </summary>
@@ -51,7 +56,7 @@
                 PPT.Application powerPointApplication,
                 string pathAndFileName)
         {
-            return powerPointApplication.Presentations.Open(pathAndFileName, oFalse, oFalse, oFalse);
+            return powerPointApplication.Presentations.Open(pathAndFileName, oFalse, oFalse, oTrue);
         }
 
         /// <summary>

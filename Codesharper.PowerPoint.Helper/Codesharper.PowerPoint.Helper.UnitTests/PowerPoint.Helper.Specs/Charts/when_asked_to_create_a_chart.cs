@@ -55,7 +55,7 @@
                                   };
             datasetList.Add(chartSeries);
 
-            returnedChart = this.chartManager.CreateChart(this.slideHandle, new string[] { "A", "B" }, datasetList);
+            returnedChart = this.chartManager.CreateChart(XlChartType.xlLine, this.slideHandle, new string[] { "A", "B" }, datasetList);
         }
 
         [Test]

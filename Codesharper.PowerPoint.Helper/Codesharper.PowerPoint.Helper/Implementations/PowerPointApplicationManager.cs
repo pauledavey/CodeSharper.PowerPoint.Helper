@@ -9,6 +9,12 @@
 
     public class PowerPointApplicationManager : OFFICE.IPowerPointManager
     {
+        public PowerPointApplicationManager()
+        {
+            
+        }
+
+
         /// <summary>
         /// Close the PowerPoint application instance
         /// </summary>

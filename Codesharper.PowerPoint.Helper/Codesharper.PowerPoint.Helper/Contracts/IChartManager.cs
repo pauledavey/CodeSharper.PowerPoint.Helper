@@ -20,7 +20,7 @@
 
         void AddChartTitle(PPT.Chart chart, ChartTitle chartTitle);
 
-        PPT.Chart CreateChart(PPT.Slide slide, string[] xAxisPoints, List<ChartSeries> datasets);
+        PPT.Chart CreateChart(XlChartType chartType, PPT.Slide slide, string[] xAxisPoints, List<ChartSeries> datasets);
 
         void AddSeriesToExistingChart(PPT.Chart chart, ChartSeries series);
     }

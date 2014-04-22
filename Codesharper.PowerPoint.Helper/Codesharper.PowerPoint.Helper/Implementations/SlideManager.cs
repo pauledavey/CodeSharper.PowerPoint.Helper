@@ -12,6 +12,13 @@
 
     public class SlideManager : ISlideManager
     {
+
+        public SlideManager()
+        {
+            
+        }
+
+
         /// <summary>
         ///     Add a comment to the specified slide
         /// </summary>

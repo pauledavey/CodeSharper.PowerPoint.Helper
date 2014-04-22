@@ -12,8 +12,14 @@
 
     #endregion
 
-    public class ChartManager : IChartManager
+    public  class ChartManager : IChartManager
     {
+
+        public ChartManager()
+        {
+            
+        }
+
 
         public void AddChartLegend(PPT.Chart chart, ChartLegend chartLegend)
         {
@@ -63,9 +69,9 @@
             return seriesToReturn;
         }
 
-        public PPT.Chart CreateChart(PPT.Slide slide, string[] xAxisPoints, List<ChartSeries> datasets)
+        public PPT.Chart CreateChart(XlChartType chartType, PPT.Slide slide, string[] xAxisPoints, List<ChartSeries> datasets)
         {
-            var chart = slide.Shapes.AddChart(XlChartType.xlLine, 10f, 10f, 900f, 400f).Chart;
+            var chart = slide.Shapes.AddChart(chartType, 10f, 10f, 900f, 400f).Chart;
 
             var workbook = (EXCEL.Workbook)chart.ChartData.Workbook;
             workbook.Windows.Application.Visible = false;
@@ -73,7 +79,7 @@
             var dataSheet = (EXCEL.Worksheet)workbook.Worksheets[1];
             dataSheet.Cells.ClearContents();
             dataSheet.Cells.Clear();
-            dataSheet.Calculate();
+            // dataSheet.Calculate();
             
             var sc = (PPT.SeriesCollection)chart.SeriesCollection();
 
