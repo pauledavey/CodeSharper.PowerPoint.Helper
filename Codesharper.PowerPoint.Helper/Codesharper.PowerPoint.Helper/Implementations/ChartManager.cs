@@ -2,6 +2,7 @@
 {
     #region Using Directives
 
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using Codesharper.PowerPoint.Helper.Contracts;
@@ -35,6 +36,33 @@
             chart.Refresh();
         }
 
+        public PPT.SeriesCollection GetAllChartSeries(PPT.Chart chart)
+        {
+            return (PPT.SeriesCollection)chart.SeriesCollection();
+        }
+
+        public PPT.Series GetChartSeriesByName(PPT.Chart chart, string seriesName)
+        {
+            var sc = (PPT.SeriesCollection)chart.SeriesCollection();
+            PPT.Series seriesToReturn = null;
+
+            int counter = 1;
+            int total = sc.Count + 1;
+
+            do
+            {
+                var series = sc.Item((counter));
+                if (series.Name == seriesName)
+                {
+                    seriesToReturn = series;
+                }
+                counter++;
+            }
+            while (counter != total);
+
+            return seriesToReturn;
+        }
+
         public PPT.Chart CreateChart(PPT.Slide slide, string[] xAxisPoints, List<ChartSeries> datasets)
         {
             var chart = slide.Shapes.AddChart(XlChartType.xlLine, 10f, 10f, 900f, 400f).Chart;
@@ -46,7 +74,7 @@
             dataSheet.Cells.ClearContents();
             dataSheet.Cells.Clear();
             dataSheet.Calculate();
-
+            
             var sc = (PPT.SeriesCollection)chart.SeriesCollection();
 
             do

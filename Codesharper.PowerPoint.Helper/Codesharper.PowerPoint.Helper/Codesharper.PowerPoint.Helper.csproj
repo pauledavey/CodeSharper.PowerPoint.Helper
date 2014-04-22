@@ -52,6 +52,7 @@
     <Compile Include="Contracts\ISlideManager.cs" />
     <Compile Include="Enumerations\ImageFormats.cs" />
     <Compile Include="Enumerations\Locations.cs" />
+    <Compile Include="Enumerations\Trendlines.cs" />
     <Compile Include="Implementations\ChartManager.cs" />
     <Compile Include="Implementations\PowerPointApplicationManager.cs" />
     <Compile Include="Implementations\PresentationManager.cs" />

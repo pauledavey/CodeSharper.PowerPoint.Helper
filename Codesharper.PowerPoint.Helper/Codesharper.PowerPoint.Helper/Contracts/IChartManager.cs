@@ -12,6 +12,10 @@
 
     public interface IChartManager
     {
+        PPT.SeriesCollection GetAllChartSeries(PPT.Chart chart);
+
+        PPT.Series GetChartSeriesByName(PPT.Chart chart, string seriesName);
+
         void AddChartLegend(PPT.Chart chart, ChartLegend chartLegend);
 
         void AddChartTitle(PPT.Chart chart, ChartTitle chartTitle);
