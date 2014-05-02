@@ -41,5 +41,11 @@
                 float topPosition,
                 float width,
                 float height);
+
+        void AddHyperLinkToWebsite(PPT.Shape shape, string hyperLinkUrl);
+
+        void AddClickedActionToShape(PPT.Shape shape, PPT.PpActionType action);
+
+        void AddMouseOverActionToShape(PPT.Shape shape, PPT.PpActionType action);
     }
 }

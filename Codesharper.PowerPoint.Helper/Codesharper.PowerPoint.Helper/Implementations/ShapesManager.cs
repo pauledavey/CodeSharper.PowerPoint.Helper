@@ -188,18 +188,5 @@
         {
             shape.ActionSettings[PPT.PpMouseActivation.ppMouseOver].Action = action;
         }
-
-        /// <summary>
-        /// Get a TextRange object to specific text within a textbox
-        /// </summary>
-        /// <param name="textbox"></param>
-        /// <param name="textToFind"></param>
-        /// <param name="matchCase"></param>
-        /// <param name="matchWholeWords"></param>
-        /// <returns></returns>
-        public PPT.TextRange FindSpecificTextInTextBox(PPT.Shape textbox, string textToFind, OFFICE.MsoTriState matchCase = OFFICE.MsoTriState.msoFalse, OFFICE.MsoTriState matchWholeWords = false;)
-        {
-            return textbox.TextFrame.TextRange.Find(textToFind, 0, matchCase, matchWholeWords);
-        }
     }
 }

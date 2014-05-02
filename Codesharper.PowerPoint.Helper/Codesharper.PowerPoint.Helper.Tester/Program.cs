@@ -117,6 +117,15 @@ namespace Codesharper.PowerPoint.Helper.Tester
                     200f,
                     200f);
 
+            // Insert the graphic for the slide
+            var pictureShape2 = PptShapeManager.AddPicture(
+                    slide,
+                    Environment.CurrentDirectory + ResourceFolder + Slide1Graphic,
+                    100f,
+                    420f,
+                    75f,
+                    75f);
+
             // Insert the textboxes
             var textShape1 = PptShapeManager.AddTextBoxToSlide(
                     slide,
@@ -142,6 +151,12 @@ namespace Codesharper.PowerPoint.Helper.Tester
             PptShapeManager.SetTextBoxText(textShape2, "A Demonstration");
             textShape2.TextEffect.FontBold = MsoTriState.msoTrue;
             textShape1.TextEffect.FontSize = 28f;
+
+            // Configure a click event hyperlink for the pictureShape
+            PptShapeManager.AddHyperLinkToWebsite(pictureShape, "http://www.codesharper.co.uk");
+
+            // Configure a click event navigate backword for the textshape1
+            PptShapeManager.AddClickedActionToShape(pictureShape2, PPT.PpActionType.ppActionEndShow);
 
             SetSlideFooter(slide, 1);
         }
