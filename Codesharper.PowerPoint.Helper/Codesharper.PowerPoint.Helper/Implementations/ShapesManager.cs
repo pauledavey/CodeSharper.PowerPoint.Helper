@@ -6,6 +6,8 @@
     using Codesharper.PowerPoint.Helper.Contracts;
     using Codesharper.PowerPoint.Helper.Objects;
 
+    using Microsoft.Office.Interop.Excel;
+
     using PPT = Microsoft.Office.Interop.PowerPoint;
     using OFFICE = Microsoft.Office.Core;
 
@@ -155,6 +157,49 @@
         public void SetTextBoxText(PPT.Shape textbox, string text)
         {
             textbox.TextEffect.Text = text;
+        }
+
+        /// <summary>
+        /// Add a web hyperlink to any shape
+        /// </summary>
+        /// <param name="shape">shape in</param>
+        /// <param name="hyperLinkUrl">string url such as "http://google.com"</param>
+        public void AddHyperLinkToWebsite(PPT.Shape shape, string hyperLinkUrl)
+        {
+            shape.ActionSettings[PPT.PpMouseActivation.ppMouseClick].Hyperlink.Address = hyperLinkUrl;
+        }
+
+        /// <summary>
+        /// Add an action to carry out when a shape is clicked with the mouse
+        /// </summary>
+        /// <param name="shape">shape in</param>
+        /// <param name="action">the action to carry out when the shape is clicked</param>
+        public void AddClickedActionToShape(PPT.Shape shape, PPT.PpActionType action)
+        {
+            shape.ActionSettings[PPT.PpMouseActivation.ppMouseClick].Action = action;
+        }
+
+        /// <summary>
+        /// Add an action to carry out when a shape is clicked with the mouse
+        /// </summary>
+        /// <param name="shape">shape in</param>
+        /// <param name="action">the action to carry out when the shape is clicked</param>
+        public void AddMouseOverActionToShape(PPT.Shape shape, PPT.PpActionType action)
+        {
+            shape.ActionSettings[PPT.PpMouseActivation.ppMouseOver].Action = action;
+        }
+
+        /// <summary>
+        /// Get a TextRange object to specific text within a textbox
+        /// </summary>
+        /// <param name="textbox"></param>
+        /// <param name="textToFind"></param>
+        /// <param name="matchCase"></param>
+        /// <param name="matchWholeWords"></param>
+        /// <returns></returns>
+        public PPT.TextRange FindSpecificTextInTextBox(PPT.Shape textbox, string textToFind, OFFICE.MsoTriState matchCase = OFFICE.MsoTriState.msoFalse, OFFICE.MsoTriState matchWholeWords = false;)
+        {
+            return textbox.TextFrame.TextRange.Find(textToFind, 0, matchCase, matchWholeWords);
         }
     }
 }

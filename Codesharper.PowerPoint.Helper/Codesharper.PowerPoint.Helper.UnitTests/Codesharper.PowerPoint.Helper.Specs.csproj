@@ -75,7 +75,10 @@
     <Compile Include="PowerPoint.Helper.Specs\Charts\when_asked_to_create_a_chart.cs" />
     <Compile Include="PowerPoint.Helper.Specs\PowerPoint\when_creating_a_PowerPoint_application.cs" />
     <Compile Include="PowerPoint.Helper.Specs\PowerPoint\when_quitting_a_PowerPoint_application.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_add_an_action_on_mouse_over_to_a_shape.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_add_a_picture.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_add_an_action_on_click_to_a_shape.cs" />
+    <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_add_a_web_hyperlink_to_a_shape.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_find_all_shapes_of_a_specific_type.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_draw_a_line.cs" />
     <Compile Include="PowerPoint.Helper.Specs\Shapes\when_asked_to_set_a_textboxs_text.cs" />
