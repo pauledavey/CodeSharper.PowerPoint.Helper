@@ -49,7 +49,8 @@ Shapes
   - Draw a line
   - Draw a shape
   - Find all shapes of a specific type in presentation
-  
+  - Add a hyperlink to a website/url location
+  - Add mouse click or mouse-over (a.k.a mouse hover) actions to a shape
 
 Charts
   - Create a new chart
