@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>CodeSharper.PowerPointHelper.Nuget</id>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <title>CodeSharper.PowerPointHelper.Nuget</title>
     <authors>Paul Davey</authors>
     <owners></owners>

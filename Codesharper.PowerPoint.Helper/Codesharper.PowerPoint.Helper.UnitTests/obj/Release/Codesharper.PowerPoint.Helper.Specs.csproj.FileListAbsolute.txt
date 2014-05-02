@@ -17,6 +17,6 @@ C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.P
 C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Release\StructureMap.xml
 C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Release\StructureMap.AutoMocking.pdb
 C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\bin\Release\StructureMap.AutoMocking.xml
-C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\obj\Release\Codesharper.PowerPoint.Helper.Specs.csprojResolveAssemblyReference.cache
 C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\obj\Release\Codesharper.PowerPoint.Helper.UnitTests.dll
 C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\obj\Release\Codesharper.PowerPoint.Helper.UnitTests.pdb
+C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper.UnitTests\obj\Release\Codesharper.PowerPoint.Helper.Specs.csprojResolveAssemblyReference.cache

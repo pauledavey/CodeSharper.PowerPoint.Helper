@@ -2,4 +2,3 @@ C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.P
 C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\CodeSharper.PowerPointHelper.Nuget\bin\Release\CodeSharper.PowerPointHelper.Nuget.pdb
 C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\CodeSharper.PowerPointHelper.Nuget\obj\Release\CodeSharper.PowerPointHelper.Nuget.dll
 C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\CodeSharper.PowerPointHelper.Nuget\obj\Release\CodeSharper.PowerPointHelper.Nuget.pdb
-C:\Users\paul.davey\Documents\GitHub\codesharper.PowerPoint.Helper\Codesharper.PowerPoint.Helper\CodeSharper.PowerPointHelper.Nuget\obj\Release\CodeSharper.PowerPointHelper.Nuget.csprojResolveAssemblyReference.cache
